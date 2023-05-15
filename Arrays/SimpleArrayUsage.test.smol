@@ -1,0 +1,23 @@
+/*
+Description: Validate basic array behaviour
+
+Steps:
+- Run
+- Expect global l1 to be number 0
+- Expect global l2 to be number 0
+- Expect global l3 to be number 3
+- Expect global l4 to be number 6
+- Expect global r1 to be number 3
+*/
+
+var a1 = new Array();
+var a2 = [];
+var l1 = a1.length;
+var l2 = a2.length;
+a1.push(1);
+a1[1] = 2;
+a1[2] = a1[0] + a1[1];
+var r1 = a1[2];
+a2[5] = 0;
+var l3 = a1.length;
+var l4 = a2.length;
