@@ -1,0 +1,9 @@
+/*
+Description: Validate basic math operations
+
+Steps:
+- Run
+- Expect global a to be number 2.75
+*/
+
+var a = 1 * 2 + 3 / 4;
