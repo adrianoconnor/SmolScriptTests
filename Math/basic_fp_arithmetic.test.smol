@@ -1,0 +1,21 @@
+/*
+Description: Validate basic math operations with decimal places
+
+I am not sure how well all of this fp business is going to hold up
+
+Steps:
+- Run
+- Expect global _add to be number 4.109999999999999
+- Expect global _subtract to be number 3.1000000000000005
+- Expect global _power to be number 22.290739923588102
+- Expect global _mul to be number 0.55
+- Expect global _div to be number 52.5
+- Expect global _remainder to be number 1.5
+*/
+
+var _add = 2.1 + 2.01;
+var _subtract = 6.11 - 3.01;
+var _power = 4.1 ** 2.2;
+var _mul = 5.5 * 0.1;
+var _div = 10.5/0.2;
+var _remainder = 10.5%3;

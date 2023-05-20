@@ -1,0 +1,24 @@
+/*
+Description: Validate basic math operations
+
+Steps:
+- Run
+- Expect global _add to be number 4
+- Expect global _subtract to be number 3
+- Expect global _power to be number 16
+- Expect global _mul to be number 10
+- Expect global _div to be number 5
+- Expect global _remainder to be number 1
+- Expect global _bitwiseAnd to be number 4
+- Expect global _bitwiseOr to be number 13
+*/
+
+var _add = 2 + 2;
+var _subtract = 6 - 3;
+var _power = 4 ** 2;
+var _mul = 5 * 2;
+var _div = 10/2;
+var _remainder = 10%3;
+var _bitwiseAnd = 12 & 5; // 12 is 4 and 8, 5 is 1 and 4
+var _bitwiseOr = 12 | 5;
+
