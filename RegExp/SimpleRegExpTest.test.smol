@@ -1,0 +1,14 @@
+/*
+Description: Validate simplest RegExp behaviour for .test() method
+
+Steps:
+- Run
+- Expect global m1 to be boolean true
+- Expect global m2 to be boolean false
+*/
+
+var r = new RegExp("a+bc");
+var s1 = "aaabc";
+var m1 = r.test(s1);
+var s2 = "abcd";
+var m2 = r.test(s2);
