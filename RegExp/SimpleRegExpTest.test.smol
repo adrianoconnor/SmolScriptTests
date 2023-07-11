@@ -5,6 +5,7 @@ Steps:
 - Run
 - Expect global m1 to be boolean true
 - Expect global m2 to be boolean false
+- Expect global m3 to be number 5
 */
 
 var r = new RegExp("a+bc");
@@ -12,3 +13,5 @@ var s1 = "aaabc";
 var m1 = r.test(s1);
 var s2 = "abcd";
 var m2 = r.test(s2);
+
+var m3 = "test abc string".search(r);
