@@ -1,5 +1,8 @@
 /*
-Description: Validate basic array behaviour
+Description: Validate basic array behaviours #1
+
+This test creates two arrays using both notations, and also adds a element
+with an index beyond the last item, which should auto increase the array size
 
 Steps:
 - Run
@@ -8,6 +11,7 @@ Steps:
 - Expect global l3 to be number 3
 - Expect global l4 to be number 6
 - Expect global r1 to be number 3
+- Expect global x to be undefined
 */
 
 var a1 = new Array();
@@ -21,3 +25,4 @@ var r1 = a1[2];
 a2[5] = 0;
 var l3 = a1.length;
 var l4 = a2.length;
+var x = a2[4];

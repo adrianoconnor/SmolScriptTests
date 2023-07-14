@@ -1,0 +1,17 @@
+/*
+Description: Validate basic array behaviours #2
+
+This test validates assignment operators (which it turns out weren't implemented in the TS version)
+
+Steps:
+- Run
+- Expect global b to be number 8
+*/
+
+var a = new Array(1, 2, 3);
+a[1] += 2; // 4
+a[1] /= 2; // 2
+a[1] *= 2; // 4
+a[1] -= 2; // 2
+a[1] **= 2; // 4
+var b = a[0] + a[a[0]] + a[2]; // 1 + 4 + 3
