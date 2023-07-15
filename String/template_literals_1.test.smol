@@ -1,0 +1,12 @@
+/*
+Description: Basic tests of backtick strings 
+
+Steps:
+- Run
+- expect global b to be string World
+- expect global c to be string Hello World
+*/
+
+var b = `World`;
+var c = `Hello ${b}`;
+
