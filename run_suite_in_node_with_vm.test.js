@@ -54,17 +54,17 @@ describe('Automated Test Suite', () => {
 
     console.log(fileName);
 
+    const test = tests[fileName];
+    const script = vm.Script(test.fileData);
     const context = { };
     
     vm.createContext(context); // Contextify the object.
-    
-    const test = tests[fileName];
     
     test.steps.forEach((step) => {
 
       if (runStepRegex.test(step)) {
         try {
-          vm.runInContext(test.fileData, context);
+          script.runInContext(context);
         }
         catch(e) {
           console.log(test.fileData);

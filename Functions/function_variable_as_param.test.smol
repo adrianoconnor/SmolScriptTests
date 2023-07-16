@@ -1,0 +1,19 @@
+/*
+Description: Test that we can call a function passing as function as a variable
+
+Steps:
+- Run
+- Expect global result to be number 25
+*/
+
+var result;
+
+var f = function(a, b) {
+    return a + b * 10;
+};
+
+function x(passed_function_ref) {
+    return passed_function_ref(5, 2);
+}
+
+result = x(f);

@@ -1,0 +1,16 @@
+/*
+Description: Basic uses of Functions (2) - returning void
+
+Steps:
+- Run
+- Expect global callCount to be number 1
+- Expect global result to be undefined
+*/
+
+var callCount = 0;
+
+function testFunc() {
+  callCount++;
+}
+
+var result = testFunc();
