@@ -1,7 +1,11 @@
 /*
 Description: Validate basic math operations with decimal places
 
-I am not sure how well all of this fp business is going to hold up
+I am not sure how well all of this fp business is going to hold up -- apparently in Jest we're supposed
+to use toBeCloseTo with decimal precision of say, 5 -- rather than toBe, because floats quite often don't
+end up being equal... but for now this test is passing so no need to change :)
+
+If we do change we'll need to just tweak the test runner to spot the decimal place and do the alternative thing.
 
 Steps:
 - Run
