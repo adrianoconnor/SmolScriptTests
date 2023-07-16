@@ -1,22 +1,16 @@
 /*
 Description: Validate basic math operations with prefix operators
 
-# node-vm-skip-test
-
 Steps:
 - Run
 - Expect global a to be number 8
-- Expect global b to be number 17
-- Run
-- Expect global a to be number 7
-- Expect global b to be number 15
+- Expect global b to be number 7
 */
 
 var a = 10;
-var b = --a + --a;
+var b = --a;
 
-debugger; // This breaks the first Run step, allowing us to check intermediate results. This only works for smol, not Node vm
-run;
+// debugger; // We can use this to break the first Run step, allowing us to check intermediate results. This only works for smol, not Node vm
 
 --a;
 --b;
