@@ -1,0 +1,16 @@
+/*
+Description: Test of backtick strings with weird characters embedded 
+
+Steps:
+- Run
+- expect global b to be string 😜
+- expect global c to be string Hello 😜
+- expect global e to be string /* //
+*/
+
+var a = `Multiline
+Test`;
+var b = `😜`;
+var c = `Hello ${b}`;
+var d = `/* // */`;
+var e = d.substring(0, 5);

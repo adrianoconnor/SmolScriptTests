@@ -7,6 +7,7 @@ Steps:
 - expect global c to be string Hello World
 */
 
+var a = `Multiline
+Test`;
 var b = `World`;
 var c = `Hello ${b}`;
-
