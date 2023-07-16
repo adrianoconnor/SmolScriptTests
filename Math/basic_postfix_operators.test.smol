@@ -1,6 +1,8 @@
 /*
 Description: Validate basic math operations with postfix operators
 
+# node-vm-skip-test
+
 Steps:
 - Run
 - Expect global a to be number 11
@@ -13,7 +15,7 @@ Steps:
 var a = 10;
 var b = a++;
 
-debugger; // This breaks the first Run step, allowing us to check intermediate results...
+debugger; // This breaks the first Run step, allowing us to check intermediate results. This only works for smol, not Node vm
 run;
 
 a++;

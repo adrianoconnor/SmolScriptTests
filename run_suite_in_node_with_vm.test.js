@@ -55,7 +55,12 @@ describe('Automated Test Suite', () => {
     console.log(fileName);
 
     const test = tests[fileName];
-    const script = vm.Script(test.fileData);
+
+    if (test.fileData.indexOf('# node-vm-skip-test') > -1) {     
+      return;
+    }
+
+    const script = new vm.Script(test.fileData);
     const context = { };
     
     vm.createContext(context); // Contextify the object.

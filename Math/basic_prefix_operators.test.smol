@@ -1,11 +1,23 @@
 /*
-Description: Validate basic math operations with decimal places
+Description: Validate basic math operations with prefix operators
 
-I am not sure how well all of this fp business is going to hold up
+# node-vm-skip-test
 
 Steps:
 - Run
-- Expect global a to be number 6
+- Expect global a to be number 8
+- Expect global b to be number 17
+- Run
+- Expect global a to be number 7
+- Expect global b to be number 15
 */
 
-var a = 2 * 3 * 5 / 5;
+var a = 10;
+var b = --a + --a;
+
+debugger; // This breaks the first Run step, allowing us to check intermediate results. This only works for smol, not Node vm
+run;
+
+--a;
+--b;
+--b;
