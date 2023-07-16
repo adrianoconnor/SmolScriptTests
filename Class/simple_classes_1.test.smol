@@ -1,0 +1,21 @@
+/*
+Description: Simple class test
+
+Steps:
+- Run
+- Expect global a to be number 5
+*/
+
+class testClass {
+  constructor() {
+    this.x = 5;
+  }
+
+  getTest() {
+    return this.x;
+  }
+}
+
+var c = new testClass();
+
+var a = c.getTest();

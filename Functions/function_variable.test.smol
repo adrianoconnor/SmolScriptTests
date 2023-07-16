@@ -1,0 +1,13 @@
+/*
+Description: Function stored in a variable
+
+Steps:
+- Run
+- Expect global b to be number 25
+*/
+
+var f = function(a, b) {
+    return a + b * 10;
+};
+
+var b = f(5, 2);

@@ -1,0 +1,11 @@
+/*
+Description: Validate basic math operations with decimal places
+
+I am not sure how well all of this fp business is going to hold up
+
+Steps:
+- Run
+- Expect global a to be number 6
+*/
+
+var a = 2 * 3 * 5 / 5;
