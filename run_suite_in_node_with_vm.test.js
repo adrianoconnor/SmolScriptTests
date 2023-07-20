@@ -86,7 +86,7 @@ describe('Automated Test Suite', () => {
       else if (expectGlobalStringRegex.test(step)) {
         const m = step.match(expectGlobalStringRegex);
 
-        expect(context[m[1]]).toBe(String(m[2]));  
+        expect(context[m[1]].toString()).toBe(String(m[2]));  
       }
       else if (expectGlobalBoolRegex.test(step)) {
         const m = step.match(expectGlobalBoolRegex);

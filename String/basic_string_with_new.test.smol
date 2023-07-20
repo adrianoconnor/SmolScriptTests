@@ -1,0 +1,19 @@
+/*
+Description: Basic tests of backtick strings 
+
+Steps:
+- Run
+- expect global a1 to be string 123
+- expect global a2 to be string 123 456
+- expect global a3 to be string 123
+- expect global a4 to be string 
+- expect global a1_len to be number 3
+- expect global a2_index to be number 4
+*/
+
+var a1 = new String(123);
+var a2 = new String('123 456');
+var a3 = new String(a1);
+var a1_len = a1.length;
+var a2_index = a2.indexOf('456');
+var a4 = new String(); // In node this gives an empty string
