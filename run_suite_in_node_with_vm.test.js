@@ -52,29 +52,39 @@ describe('Automated Test Suite', () => {
 
   test.each(testFiles)('%s', (fileName) => {
 
-    console.log(fileName);
+    runTest(fileName, false);
+    runTest(fileName, true);
 
-    const test = tests[fileName];
+  })
+});
 
-    if (test.fileData.indexOf('# node-vm-skip-test') > -1) {     
+function runTest(fileName, removeSemicolons = false) {
+
+  const currentTest = tests[fileName];
+
+  let source = currentTest.fileData;
+
+    if (source.indexOf('# node-vm-skip-test') > -1) {     
       return;
     }
 
-    const script = new vm.Script(test.fileData);
+    if (removeSemicolons) {
+      source = source.replace(/(?<!(for\(.*?;.*?)|for\(.*?);/g, '') // This won't work for for followed by a statement on the same line
+    }
+
+    const script = new vm.Script(source);
     const context = { };
     
     vm.createContext(context); // Contextify the object.
     
-    test.steps.forEach((step) => {
+    currentTest.steps.forEach((step) => {
 
       if (runStepRegex.test(step)) {
         try {
           script.runInContext(context);
         }
         catch(e) {
-          console.log(test.fileData);
-          //console.log(vm.decompile());
-          //console.log(debugLog);
+          console.log(source);
           throw e;
         }
       }
@@ -102,6 +112,4 @@ describe('Automated Test Suite', () => {
         throw new Error(`Could not parse ${step}`);
       }
     });
-
-  })
-});
+}

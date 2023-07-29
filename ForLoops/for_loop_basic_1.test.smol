@@ -1,0 +1,13 @@
+/*
+Description: Test that we can call a function passing as function as a variable
+
+Steps:
+- Run
+- Expect global result to be number 10
+*/
+
+var result = 0;
+
+for(var i = 0; i < 10; i++) {
+    result += 1; 
+}
