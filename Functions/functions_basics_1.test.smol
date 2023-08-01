@@ -1,6 +1,8 @@
 /*
 Description: Basic uses of Functions (1) -- simple calling and recursion
 
+// - Set MaxCycleCount to 300000 ???
+
 Steps:
 - Run
 - Expect global f to be number 6765

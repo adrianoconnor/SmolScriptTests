@@ -1,0 +1,16 @@
+/*
+Description: Test that we can call a function passing as function as a variable
+
+Steps:
+- Run
+- Expect global i to be number 2
+*/
+
+var i = 0;
+
+while(i < 10) {
+    i = i + 1;
+    break;
+}
+
+i = i + 1;
