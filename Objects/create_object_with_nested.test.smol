@@ -1,0 +1,27 @@
+/*
+Description: Create an object and perform some basic operations
+
+Steps:
+- Run
+- Expect global a to be number 99
+- Expect global b to be number 100
+*/
+
+var o1 = {
+    o1: {
+      x: 0
+    },
+
+    o2: [ {}, {}, {}, {
+        o4: {
+            x: 99
+        }
+    }]
+    
+};
+
+var a = o1.o2[3].o4.x;
+
+o1.o2[3].o4.x += 1;
+
+var b = o1.o2[3].o4.x;

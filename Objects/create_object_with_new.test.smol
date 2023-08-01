@@ -1,0 +1,12 @@
+/*
+Description: Create an object and perform some basic operations
+
+Steps:
+- Run
+- Expect global a to be number 123
+*/
+
+var g = [123];
+var o = {}; //new Object();
+o.x = function() { return g; };
+var a = o.x()[0];

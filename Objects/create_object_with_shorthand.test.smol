@@ -1,0 +1,10 @@
+/*
+Description: Create the simplest object and do some really simple checks
+
+Steps:
+- Run
+- Expect global b to be number 1
+*/
+
+var o = { z: 1 };
+var b = o.z;
