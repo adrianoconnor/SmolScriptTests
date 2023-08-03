@@ -1,0 +1,44 @@
+/*
+Description: Simple class test with one class having a reference to an instance of another
+
+Steps:
+- Run
+- Expect global b to be number 2
+- Expect global d to be number 2
+- Expect global e to be number 2
+- Expect global f to be number 2
+- Expect global g to be number 2
+*/
+
+class testClass1 {
+    constructor() {
+        this.testClass = new testClass2();
+    }
+
+    getTestClass() {
+        return this.testClass;
+    }
+}
+
+class testClass2 {
+    constructor() {
+        this.test2 = 2;
+    }
+
+    getTestValue() {
+        return this.test2;
+    }
+}
+
+var c = new testClass1();
+
+var a = c.testClass;
+var b = a.test2;
+
+var d = c.testClass.test2;
+
+var e = c.getTestClass().test2;
+
+var f = c.getTestClass().getTestValue();
+
+var g = c.testClass.getTestValue();

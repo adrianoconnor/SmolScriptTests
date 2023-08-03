@@ -43,7 +43,7 @@ allFiles.forEach((fileName) => {
 });
 
 const runStepRegex = /- run$/i;
-const expectGlobalNumberRegex = /- Expect global (.*?) to be number (\d+(\.{0,1}\d*))/i;
+const expectGlobalNumberRegex = /- Expect global (.*?) to be number (-{0,1}\d+(\.{0,1}\d*))/i;
 const expectGlobalStringRegex = /- expect global (.*?) to be string (.*)/i;
 const expectGlobalBoolRegex = /- expect global (.*?) to be boolean (.*)/i;
 const expectGlobalUndefinedRegex = /- expect global (.*?) to be undefined/i;
@@ -96,7 +96,14 @@ function runTest(fileName, removeSemicolons = false) {
       else if (expectGlobalStringRegex.test(step)) {
         const m = step.match(expectGlobalStringRegex);
 
-        expect(context[m[1]].toString()).toBe(String(m[2]));  
+        try {
+          expect(context[m[1]].toString()).toBe(String(m[2]));                      
+        }
+        catch(e)
+        {
+          console.log(`Failed checking value of ${m[1]}`);
+          throw e;
+        }
       }
       else if (expectGlobalBoolRegex.test(step)) {
         const m = step.match(expectGlobalBoolRegex);

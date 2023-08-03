@@ -1,0 +1,24 @@
+/*
+Description: Test that scope works as expected with nested if statements
+
+# node-vm-skip-test
+
+We skip this test in node because the inner var would need to be 'let' to get the same
+behavior as smol. In node the final value of global a would be 3.
+
+Steps:
+- Run
+- expect global a to be number 1
+- expect global b to be number 3
+*/
+
+var a = 1;
+var b = 0;
+
+if (true) {
+  var a = 2;
+  if (true) {
+    a = 3;
+    b = a;
+  }
+}

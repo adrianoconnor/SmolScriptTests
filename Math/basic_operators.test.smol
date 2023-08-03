@@ -1,0 +1,43 @@
+/*
+Description: Validate basic math operations with decimal places
+
+I am not sure how well all of this fp business is going to hold up
+
+Steps:
+- Run
+- Expect global a1 to be number 6
+- Expect global a2 to be number 15
+- Expect global b2 to be number 12
+- Expect global a3 to be number 0
+- Expect global b3 to be number 4
+- Expect global a4 to be number 2
+- Expect global a5 to be number 8.5
+- Expect global a6 to be number 12
+- Expect global a7 to be number 1
+- Expect global a8 to be number 16
+- Expect global a9 to be number 4
+- Expect global b9 to be number -4
+
+*/
+
+var a1 = 1 + 2 + 3;
+
+var a2 = 11 | 4;
+var b2 = 12 | 4;
+
+var a3 = 11 & 4;
+var b3 = 12 & 4;
+
+var a4 = 3 - 1;
+
+var a5 = 4 * 2 + 1 / 2;
+
+var a6 = 4 * ((3 + 1) / 2 + 1);
+
+var a7 = 4 % 3;
+
+var a8 = 4 ** 2;
+
+var a9 = -4; 
+a9 = -a9; 
+var b9 = -a9;

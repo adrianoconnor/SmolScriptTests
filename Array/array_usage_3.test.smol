@@ -1,0 +1,22 @@
+/*
+Description: Validate basic array behaviours #3
+
+Copied from .net original unit tests
+
+Steps:
+- Run
+- Expect global b to be number 3
+- Expect global c to be number 3
+- Expect global b2 to be number 4
+- Expect global c2 to be number 3
+*/
+
+var a = [];
+a[0] = 1;
+a[2] = 3;
+var b = a.length;
+var c = a[2];
+
+var a2 = [1, 2, 3, []];
+var b2 = a2.length;
+var c2 = a2[2];

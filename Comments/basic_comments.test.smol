@@ -1,0 +1,35 @@
+/*
+Description: Validate basic comments don't break the compiler
+
+Steps:
+- Run
+- Expect global a to be number 11
+- Expect global b to be number 11
+*/
+
+var a = 1;
+//function f(x) {
+// x(10);
+//}
+function f(x) { // ?
+  x(10); // ?
+} //?
+f(function(z) { a += 10; });
+//
+
+var b = 1;
+/*
+//* * //
+function f(x) {
+  x(10);
+}
+*/
+function f(x) {
+  x(10);
+}
+/* 
+' "" @
+* This breaks?
+*/
+
+f(function(z) { b += 10; });

@@ -1,0 +1,32 @@
+/*
+Description: Ternary Expressions
+
+Steps:
+- Run
+- Expect global b1 to be number 1
+- Expect global c1 to be number 2
+- Expect global a2 to be number 2
+- Expect global b3 to be number 3
+// - Expect global c3 to be number 3 //TODO: FIX THIS TEST!
+*/
+
+var a1 = true;
+var b1 = a1 ? 1 : 2;
+var c1 = !a1 ? 1 : 2;
+
+
+var a2 = 0;
+
+function f1() { a2 = 1; }
+function f2() { a2 = 2; }
+function f3() { return a2 == 0; }
+
+a2 == f3() ? f1() : f2();
+
+
+var a3 = 2;
+var b3 = 0;
+var c3 = 0;
+
+b3 = ((a3 == 0) ? 1 : ((a3 == 1) ? 2 : 3));
+c3 = a3 == 0 ? 1 : a3 == 1 ? 2 : 3; 

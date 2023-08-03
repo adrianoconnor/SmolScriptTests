@@ -1,0 +1,20 @@
+/*
+Description: Test that we can call a function passing as function as a variable
+
+Steps:
+- Run
+- Expect global a to be number 10000
+- Expect global alwaysTrueCalled to be number 10000
+*/
+
+var a = 0;
+
+var alwaysTrueCalled = 0;
+function alwaysTrue() {
+    alwaysTrueCalled = alwaysTrueCalled + 1;
+    return true;
+}
+
+while(a < 10000 && alwaysTrue()) {
+  a = a + 1;
+}

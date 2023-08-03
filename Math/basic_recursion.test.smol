@@ -1,0 +1,15 @@
+/*
+Description: Basic recursion using Fibonacci
+
+Steps:
+- Run
+- Expect global f to be number 6765
+*/
+
+function fibonacci(num) {
+  if (num <= 1) return num;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+
+var f = fibonacci(20);

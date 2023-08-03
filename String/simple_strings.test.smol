@@ -1,0 +1,26 @@
+/*
+Description: Simple strings 
+
+Steps:
+- Run
+- expect global s1 to be string 123
+- expect global s2 to be string 123 456
+- expect global s3 to be string 123
+- expect global s4 to be string 123
+- expect global s5 to be string "Single Quote String"
+- expect global s6 to be string 'Double Quote String'
+- expect global s7 to be string "Single Quote String" 'Double Quote String'
+- expect global s8 to be string Test String 8
+- expect global s9 to be string test x}x
+*/
+
+var s1 = new String(123);
+var s2 = new String('123 456');
+var s3 = new String(s1);
+var s4 = s1;
+var s5 = '"Single Quote String"';
+var s6 = "'Double Quote String'";
+var s7 = s5 + ' ' + s6;
+var s8 = "Test String " + 8;
+var a = 'x'; 
+var s9 = `test ${"x}x"}`;

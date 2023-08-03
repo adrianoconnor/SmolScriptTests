@@ -1,0 +1,20 @@
+/*
+Description: Validate basic array behaviours #1
+
+This test creates two arrays using both notations, and also adds a element
+with an index beyond the last item, which should auto increase the array size
+
+Steps:
+- Run
+- Expect global b to be number 3
+- Expect global c to be number 3
+- Expect global d to be number 2
+- Expect global e to be number 3
+*/
+
+var a = new Array(1, 2, 3);
+var b = a.length;
+var c = a.pop();
+var d = a.length;
+a.push('x');
+var e = a.length;

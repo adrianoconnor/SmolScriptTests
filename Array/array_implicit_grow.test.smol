@@ -1,0 +1,16 @@
+/*
+Description: Implicitly grow an array
+
+Steps:
+- Run
+- Expect global b to be number 3
+- Expect global d to be boolean true
+- Expect global c to be undefined
+*/
+
+var a = new Array();
+a[0] = 1;
+a[2] = 3;
+var b = a.length;
+var c = a[1];
+var d = (c == undefined);

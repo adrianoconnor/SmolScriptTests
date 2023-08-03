@@ -1,0 +1,39 @@
+/*
+Description: Really simple equality
+
+These tests are from probably the first test that I wrote in .net to test the basics of
+parsing and executing the simplest instructions. They probably don't have much value now
+but they don't hurt being here.
+
+Steps:
+- Run
+- Expect global a1 to be boolean true
+- Expect global b1 to be boolean false
+- Expect global a2 to be boolean true
+- Expect global b2 to be boolean false
+- Expect global a3 to be boolean true
+- Expect global b3 to be boolean false
+- Expect global a4 to be boolean true
+- Expect global b4 to be boolean true
+- Expect global a5 to be boolean true
+- Expect global b5 to be boolean false
+- Expect global a6 to be boolean true
+- Expect global b6 to be boolean true
+- Expect global a7 to be boolean true
+- Expect global b7 to be boolean false
+*/
+
+var a1 = (1 == 1);
+var b1 = (1 == 2);
+var a2 = (1 != 2);
+var b2 = (1 != 1);
+var a3 = (2 > 1);
+var b3 = (1 > 2);
+var a4 = (2 >= 1);
+var b4 = (1 >= 1);
+var a5 = (1 < 2);
+var b5 = (2 < 1);
+var a6 = (1 <= 2); 
+var b6 = (1 <= 1);
+var a7 = (!false);
+var b7 = (!true);

@@ -1,0 +1,28 @@
+/*
+Description: Logical And
+
+Steps:
+- Run
+- Expect global a to be number 1
+- Expect global alwaysTrueCalled to be number 1
+- Expect global alwaysFalseCalled to be number 0
+*/
+
+var a = 0;
+
+var alwaysTrueCalled = 0;
+function alwaysTrue() {
+    alwaysTrueCalled = alwaysTrueCalled + 1;
+    return true;
+}
+
+var alwaysFalseCalled = 0;
+function alwaysFalse() {
+    alwaysFalseCalled = alwaysFalseCalled + 1;
+    return false;
+}
+
+if (alwaysTrue() || alwaysFalse())
+  a = 1;
+else
+  a = 2;
