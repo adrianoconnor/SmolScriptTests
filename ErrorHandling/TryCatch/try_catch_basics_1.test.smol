@@ -1,0 +1,24 @@
+/*
+Description: Simple try/catch/finally block with no errors behaves itself
+
+Steps:
+- Run
+- Expect global a to be number 1
+- Expect global b to be number 1s
+- Expect global c to be number 1
+*/
+
+var a = 0;
+var b = 0;
+var c = 0;
+
+try {
+    a = 1;
+    d = e;
+}
+catch {
+    b = 1;
+}
+finally {
+    c = 1;
+}
