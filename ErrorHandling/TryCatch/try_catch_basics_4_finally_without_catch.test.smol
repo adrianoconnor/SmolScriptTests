@@ -5,7 +5,7 @@ Steps:
 - Run
 - Expect global a to be number 1
 - Expect global b to be number 1
-- Expect global c to be number 0
+- Expect global c to be number 1
 */
 
 var a = 0;
@@ -13,8 +13,14 @@ var b = 0;
 var c = 0;
 
 try {
-    a = 1;
-    d = e;
+    try {
+        a = 1;
+        d = e;
+        a = 2;
+    }
+    finally {
+        c = 1;
+    }
 }
 catch {
     b = 1;

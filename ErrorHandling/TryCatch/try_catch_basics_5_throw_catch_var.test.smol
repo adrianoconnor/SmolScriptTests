@@ -6,16 +6,20 @@ Steps:
 - Expect global a to be number 1
 - Expect global b to be number 1
 - Expect global c to be number 0
+- Expect global err to be string error
 */
 
 var a = 0;
 var b = 0;
 var c = 0;
+var err = '';
 
 try {
     a = 1;
-    d = e;
+    throw 'error'; // Not a good idea to throw this, but we didn't create Error yet :)
+    a = 2;
 }
-catch {
+catch(e) {
     b = 1;
+    err = e;
 }
