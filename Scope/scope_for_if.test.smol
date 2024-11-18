@@ -10,14 +10,14 @@ Steps:
 - Run
 - expect global a to be number 1
 - expect global b to be number 3
-*/
+*/ 
 
 var a = 1;
 var b = 0;
 
-if (true) {
+if (a == 1) {
   var a = 2;
-  if (true) {
+  if (a == 2) {
     a = 3;
     b = a;
   }

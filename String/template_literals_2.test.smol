@@ -8,6 +8,7 @@ Steps:
 - expect global e to be string /* //
 - expect global f to be string Fifteen is 15 and not 20.
 - expect global z to be string Ternary check: ok 😜
+- expect global cc to be string 12
 */
 
 var a = `Multiline
@@ -21,3 +22,6 @@ var y = 10;
 // var z = `{abc}`; 
 var f = "Fifteen is " + (x + y) + " and not " + (2 * x + y) + ".";
 var z = `Ternary check: ${ (y == 10) ? 'ok 😜' : 'not ok' }`;
+var aa = 1;
+var bb = 2;
+var cc = `${aa}${bb}`;
