@@ -3,11 +3,17 @@ Description: Test that we can call a function passing as function as a variable
 
 Steps:
 - Run
-- Expect global result to be number 10
+- Expect global result1 to be number 10
+- Expect global result2 to be number 45
 */
 
-var result = 0;
+var result1 = 0;
+var result2 = 0;
 
 for(var i = 0; i < 10; i++) {
-    result += 1; 
+    result1 += 1; 
+}
+
+for(var i = 0; i < 10; i++) {
+    result2 += i; 
 }

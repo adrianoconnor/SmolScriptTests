@@ -1,0 +1,11 @@
+/*
+Description: Basic use of fat arrows => ()
+
+Steps:
+- Run
+- Expect global x to be number 1
+*/
+
+var x = 0;
+var f = () => 1;
+x = f();
